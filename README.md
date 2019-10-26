@@ -16,9 +16,9 @@ Eclipse
 Tomcat 8
 Maven
 
-/****************************************************
- 1. CRIAÇÃO DE TABELAS - BANCO DE DADOS POSTGRESQL
-*****************************************************/
+/*
+## 1. CRIAÇÃO DE TABELAS - BANCO DE DADOS POSTGRESQL
+*/
 
 CREATE TABLE tipo_senha (
 	sq_tipo_senha SERIAL PRIMARY KEY,
@@ -41,9 +41,9 @@ CREATE TABLE sequencial_senha (
 	dt_ultimo_sequencial DATE NOT NULL
 );
 
-/*************************************************
- 2. CRIAÇÃO DE TABELAS - BANCO DE DADOS MYSQL
-**************************************************/
+/*
+## 2. CRIAÇÃO DE TABELAS - BANCO DE DADOS MYSQL
+*/
 
 CREATE TABLE tipo_senha (
 	sq_tipo_senha INT NOT NULL AUTO_INCREMENT,
@@ -69,9 +69,9 @@ CREATE TABLE sequencial_senha (
 	PRIMARY KEY (id)
 );
 
-/*************************************************************************************
- 3. Pós execução de um dos scripts acima, não esquecer de popular as TABELAS de apoio
-**************************************************************************************/
+/*
+## 3. Pós execução de um dos scripts acima, não esquecer de popular as TABELAS de apoio
+*/
 
 // populando tabela: tipo_senha
 insert into tipo_senha(descricao_tipo, sigla_tipo) values ('NORMAL', 'N');
@@ -81,9 +81,9 @@ insert into tipo_senha(descricao_tipo, sigla_tipo) values ('PREFERENCIAL', 'P');
 INSERT INTO sequencial_senha values(1, 0, now());
 INSERT INTO sequencial_senha values(2, 0, now());
 
-/*******************************************************************************
- 4. CONFIGURANDO APLICAÇÃO PARA O BANCO POSTGRES / MYSQL
-********************************************************************************/
+/*
+## 4. CONFIGURANDO APLICAÇÃO PARA O BANCO POSTGRES / MYSQL
+*/
 
 As configurações necessárias de acesso à banco são encontradas no arquivo denominado: "application.properties".
 
